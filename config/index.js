@@ -1,7 +1,7 @@
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
-
+const dataId = 1//后台唯一ID
 const path = require('path')
 
 module.exports = {
@@ -39,12 +39,12 @@ module.exports = {
   build: {
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
-
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-
+    // assetsSubDirectory: 'static',
+    assetsSubDirectory: '',//设置二级路径
+    // assetsPublicPath: 'https://ohudong.cztv.com/5/259978/',
+    assetsPublicPath: dataId ? 'https://www.simpleqq.com/vuex/' : './',
     /**
      * Source Maps
      */
